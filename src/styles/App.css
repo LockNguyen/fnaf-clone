@@ -1,0 +1,133 @@
+body {
+  background-color: black;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* MY CSS */
+
+.Screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;  
+
+  display: flex;
+  justify-content: center;
+}
+
+.Office-Div {
+  --positionX: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  height: 100vh;
+  width: calc(100vh / 9 * 20);
+
+  transition: all 0.5s;
+  transform: translateX(var(--positionX));
+}
+img.Office {
+  background-size: cover;
+  height: 100vh;
+}
+
+.Turn {
+  position: absolute;
+  height: inherit;
+  width: 30vw;
+  top: 0;
+
+  z-index: 1;
+}
+.Turn-Left {
+  left: 0;
+}
+.Turn-Right {
+  right: 0;
+}
+.Turn-Left:hover ~ .Office-Div {
+  --positionX: 4%;
+}
+.Turn-Right:hover ~ .Office-Div {
+  --positionX: -4%;
+}
+
+img.Toggle-Left {
+  position: absolute;
+  width: 6%;
+  top: 35%;
+  left: 0;
+}
+img.Toggle-Right {
+  position: absolute;
+  width: 6%;
+  top: 35%;
+  right: 2%;
+}
+
+.Cam-Toggle-Div {
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+.Cam-Toggle {
+  position: fixed;
+  top: 92%;
+  z-index: 10;
+}
+
+.Cam-On {
+  position: fixed;
+  top: 50%;
+  left: 20%;
+  z-index: 9;
+}
